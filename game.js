@@ -1,5 +1,7 @@
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-btns')
+const gameImage = document.getElementById('image')
+const gameLink = document.getElementById('link')
 
 //keeps track of character items and influences the route
 let state = {}
@@ -25,6 +27,8 @@ const showTextNode = (textNodeIndex) => {
             button.classList.add('btn')
             button.addEventListener('click', () => selectOption(option))
             optionButtonsElement.appendChild(button)
+            gameImage.src = option.image
+            gameLink.href = option.link
         }
     })
 }
@@ -59,7 +63,7 @@ const textNodes = [
             },
             {
                 text: 'Hop on discord to run some KOF 13',
-                setState: { alone: true},
+                setState: { alone: true },
                 nextText: 2.3
             },
             {
@@ -71,7 +75,7 @@ const textNodes = [
     },
     {
         id: 2.1,
-        text: 'This game is heat. But do I wanna lab or fight niggas?',
+        text: 'This game is heat. But do I wanna lab or run sets?',
         options: [
             {
                 text: 'I need to work on this new schmix',
@@ -145,7 +149,7 @@ const textNodes = [
             {
                 text: 'Fuck it...TIME TO CHALLENGE IFC YIPES',
                 requiredState: (currentState) => currentState.labMonster,
-                setState: { labMonster: false,  dumbNigga: true },
+                setState: { labMonster: false,  mahvel: true },
                 nextText: 4.13
             },
             {
@@ -180,13 +184,13 @@ const textNodes = [
             {
                 text: 'Fuck it the only way to get better is to get washed',
                 requiredState: (currentState) => currentState.worldWarrior,
-                setState: { worldWarrior: false, realNigga: true },
+                setState: { worldWarrior: false, realDawg: true },
                 nextText: 5.1
             },
             {
                 text: 'Fuck it...TIME TO CHALLENGE IFC YIPES',
                 requiredState: (currentState) => currentState.worldWarrior,
-                setState: { worldWarrior: false,  dumbNigga: true },
+                setState: { worldWarrior: false,  mahvel: true },
                 nextText: 4.13
             },
             {
@@ -209,7 +213,7 @@ const textNodes = [
             {
                 text: 'Fuck it...TIME TO CHALLENGE IFC YIPES',
                 requiredState: (currentState) => currentState.labMonster,
-                setState: { labMonster: false,  dumbNigga: true },
+                setState: { labMonster: false,  mahvel: true },
                 nextText: 4.13
             },
             {
@@ -225,7 +229,9 @@ const textNodes = [
         options: [
             {
                 text: 'nigga...play somethin else forreal...',
-                requiredState: (currentState) => currentState.dumbNigga,
+                requiredState: (currentState) => currentState.mahvel,
+                image: "https://i.imgur.com/9fjJe.jpg",
+                link: 'https://youtu.be/sZZUMjoxfZA',
                 nextText: -1
             },
         ]
@@ -254,14 +260,14 @@ const textNodes = [
         options: [
             {
                 text: 'Fuck it...TIME TO CHALLENGE IFC YIPES',
-                requiredState: (currentState) => currentState.realNigga,
-                setState: { labMonster: false,  dumbNigga: true },
+                requiredState: (currentState) => currentState.realDawg,
+                setState: { labMonster: false,  mahvel: true },
                 nextText: 4.13
             },
             {
                 text: 'I mean...do you even have to ask?',
-                requiredState: (currentState) => currentState.realNigga,
-                setState: { labMonster: false,  dumbNigga: true },
+                requiredState: (currentState) => currentState.realDawg,
+                setState: { labMonster: false,  mahvel: true },
                 nextText: 7
             },
             {
@@ -273,10 +279,12 @@ const textNodes = [
     },
     {
         id: 5.2,
-        text: 'GAME OVER. Get that shit the fuck outta here nigga you better than that.',
+        text: 'GAME OVER. And as a matter of fact, Get That Ass Banned!',
         options: [
             {
-                text: 'maaaan gtfo my game cuz',
+                text: 'GTAB',
+                image: 'https://i.kym-cdn.com/photos/images/newsfeed/001/851/898/d87.jpg',
+                link: 'https://youtu.be/TiQMAvY1KTk?t=73',
                 nextText: -1
             }
         ]
@@ -287,6 +295,7 @@ const textNodes = [
         options: [
             {
                 text: 'Run this shit back',
+                image: 'https://images.squarespace-cdn.com/content/v1/50f14d35e4b0d70ab5fc4f24/1408430432614-KPKJ9XRMFYXFQ11JYWJN/ke17ZwdGBToddI8pDm48kP40LdH9I0vWip1ONdUITpBZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGzy2xsHRcqMKdLvo11xUK2SCHDf2QS3v5z6NtFGIHTAe87Nsj43NRAr6WuWZv5DKs/image-asset.gif',
                 nextText: -1
             }
         ]
