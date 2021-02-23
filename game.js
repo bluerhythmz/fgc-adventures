@@ -2,7 +2,12 @@ const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('option-btns')
 const gameImage = document.getElementById('image')
 const gameLink = document.getElementById('link')
-
+let soundArray = ['audio/audiogtab.mp3', 'audio/audioyipes.wav']
+let sound = new Audio()
+function playSound(num) {
+    sound.src = soundArray[num]
+    sound.play()
+}
 //keeps track of character items and influences the route
 let state = {}
 
@@ -31,6 +36,13 @@ const showTextNode = (textNodeIndex) => {
             gameLink.href = option.link
         }
     })
+
+    if (textNode.id === 5.2) {
+        playSound(0)
+    }
+    if (textNode.id === 4.13) {
+        playSound(1)
+    }
 }
 
 const showOption = (option) => {
