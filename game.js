@@ -9,7 +9,7 @@ const startGame = () => {
     state = {}
     showTextNode(1)
 }
-
+ 
 //displays part of story/options
 const showTextNode = (textNodeIndex) => {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
