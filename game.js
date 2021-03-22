@@ -253,7 +253,7 @@ const textNodes = [
         text: 'This is your final warning...',
         options: [
             {
-                text: 'I...I really like Ed...and...Juri feet...and Menat is best girl...',
+                text: 'I...I really like Ed...and....and Menat is best girl...',
                 requiredState: (currentState) => currentState.megaTrash,
                 setState: { megaTrash: false, megaTrash: true },
                 nextText: 5.2
