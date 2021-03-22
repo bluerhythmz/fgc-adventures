@@ -255,7 +255,7 @@ const textNodes = [
             {
                 text: 'I...I really like Ed...and....and Menat is best girl...',
                 requiredState: (currentState) => currentState.megaTrash,
-                setState: { megaTrash: false, megaTrash: true },
+                setState: { megaTrash: true },
                 nextText: 5.2
             },
             {
